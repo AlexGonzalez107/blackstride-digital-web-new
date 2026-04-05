@@ -1,0 +1,66 @@
+import { motion } from 'motion/react';
+import { Logo } from './Logo';
+
+export default function About() {
+  return (
+    <section id="about" className="py-32 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+          >
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tighter">
+              A different kind <br /> <span className="text-agency-accent text-5xl md:text-7xl">of agency.</span>
+            </h2>
+            <div className="space-y-6 text-lg text-foreground/70 leading-relaxed">
+              <p>
+                Blackstride Digital is built differently. We run an AI-powered delivery stack — which means faster builds, lower overhead, and results that punch well above our price point.
+              </p>
+              <div className="flex items-center gap-4 py-4">
+                <Logo className="w-12 h-12 opacity-30" color="white" />
+                <div className="h-[1px] flex-grow bg-agency-border/30"></div>
+              </div>
+              <p>
+                We're not a 10-person agency with 10x the overhead. We're a precision operation that moves fast and stays accountable.
+              </p>
+              <p className="font-display text-agency-accent tracking-widest uppercase text-sm">
+                Built to Move.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false }}
+            className="relative group"
+          >
+            <div className="aspect-square bg-card border border-agency-border group-hover:border-agency-accent/40 transition-colors duration-500 relative overflow-hidden">
+               <img 
+                src="https://picsum.photos/seed/agency/800/800" 
+                alt="Blackstride Precision" 
+                className="w-full h-full object-cover opacity-40 grayscale"
+                referrerPolicy="no-referrer"
+               />
+               <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent"></div>
+               
+               <div className="absolute bottom-10 left-10 right-10">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="h-[1px] flex-grow bg-agency-accent/30"></div>
+                    <span className="text-agency-accent font-display text-[10px] tracking-[0.4em] uppercase">Precision Operation</span>
+                  </div>
+                  <p className="text-foreground font-display text-2xl tracking-tighter uppercase font-bold">Outcome-Obsessed Delivery</p>
+               </div>
+            </div>
+            
+            {/* Decorative elements */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-agency-accent/30"></div>
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-agency-accent/30"></div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
