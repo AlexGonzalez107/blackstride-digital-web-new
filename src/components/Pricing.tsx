@@ -4,8 +4,8 @@ import { ArrowRight } from 'lucide-react';
 const tiers = [
   {
     name: "Starter",
-    price: "$1,500-3K",
-    period: "+ $150/mo",
+    price: "$500",
+    period: "+ $50/mo",
     description: "Perfect for new businesses ready to get online fast.",
     lane: "FOR NEW BUSINESSES THAT NEED A CLEAN LAUNCH LANE.",
     deliverables: "5 DELIVERABLES",
@@ -21,8 +21,8 @@ const tiers = [
   },
   {
     name: "Growth",
-    price: "$3-7K",
-    period: "+ $300/mo",
+    price: "$1,000",
+    period: "+ $100/mo",
     description: "For businesses ready to compete and convert online.",
     lane: "FOR TEAMS READY TO COMPETE AND CONVERT CONSISTENTLY.",
     deliverables: "6 DELIVERABLES",
@@ -39,8 +39,8 @@ const tiers = [
   },
   {
     name: "Premium",
-    price: "$7-15K",
-    period: "+ $500/mo+",
+    price: "$3,000",
+    period: "+ 300/mo+",
     description: "The full digital suite for serious growth.",
     lane: "FOR OPERATORS WHO NEED THE FULL DIGITAL GROWTH STACK.",
     deliverables: "8 DELIVERABLES",
@@ -94,7 +94,7 @@ export default function Pricing() {
             >
               {tier.recommended && (
                 <div className="absolute top-0 right-0 px-6 py-2 bg-agency-accent text-background text-[10px] font-bold tracking-[0.4em] uppercase shadow-lg">
-                  Recommended
+                  Most Popular
                 </div>
               )}
               
